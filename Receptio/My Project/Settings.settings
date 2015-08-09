@@ -1,0 +1,169 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMTPServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTPUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">user@gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTPPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMTPPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="EnableSSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MailFrom" Type="System.String" Scope="User">
+      <Value Profile="(Default)">user@gmail.com</Value>
+    </Setting>
+    <Setting Name="Authentication" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SystemPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LocationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Front Lobby</Value>
+    </Setting>
+    <Setting Name="SelectCamera" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="WelcomeText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hello. All visitors please sign
+in and out here.</Value>
+    </Setting>
+    <Setting Name="SignInInstructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please start by entering your information.
+Click the picture to take your webcam
+photo and announce your arrival. Thank you.</Value>
+    </Setting>
+    <Setting Name="NameText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your Name</Value>
+    </Setting>
+    <Setting Name="CompanyText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your Company</Value>
+    </Setting>
+    <Setting Name="VisitingText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Who are you here to see?</Value>
+    </Setting>
+    <Setting Name="SignInButtonText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign In</Value>
+    </Setting>
+    <Setting Name="SignOutButtonText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign Out</Value>
+    </Setting>
+    <Setting Name="BackgroundImage" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WelcomeBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">15, 48, 99</Value>
+    </Setting>
+    <Setting Name="FontColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="VisitorLogLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SignOutText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank you for signing out</Value>
+    </Setting>
+    <Setting Name="NotifyText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%u has been notified</Value>
+    </Setting>
+    <Setting Name="FontName" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Century Gothic, 14pt</Value>
+    </Setting>
+    <Setting Name="UseMotionDetection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WelcomeMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hello.  All visitors please sign in and out here.</Value>
+    </Setting>
+    <Setting Name="MotionSensitivity" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="VideoSource" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="EmailNotifications" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EmailText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your E-mail Address</Value>
+    </Setting>
+    <Setting Name="EmailVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CompanyVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VisitorBadgePrinting" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EmployeeDirectoryLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MotionDelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="MailChimpAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MailChimpListID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseMailChimp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CameraResolutionIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SnapshotResolutionIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="UseFaceDetection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseTouchUI" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PrinterIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CompanyLogo" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SignOutInstructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please scan your visitor badge or select
+your name and click your picture. Thank You.</Value>
+    </Setting>
+    <Setting Name="SignOutVisitor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please select your name</Value>
+    </Setting>
+    <Setting Name="SignInButtonColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 100, 255</Value>
+    </Setting>
+    <Setting Name="SignInBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">15, 48, 99</Value>
+    </Setting>
+    <Setting Name="SignOutBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">15, 48, 99</Value>
+    </Setting>
+    <Setting Name="SignOutButtonColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 100, 255</Value>
+    </Setting>
+    <Setting Name="UseVisitorDetection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EmailServerType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FaceDetectionSensitivity" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
