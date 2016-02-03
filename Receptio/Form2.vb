@@ -319,6 +319,7 @@ Public Class frmSettings
         VisitorLogLoad()
         picSignInPicture.Image = My.Resources.blank_person
         'Me.TopMost = True
+        AutoUpdaterDotNET.AutoUpdater.Start("http://lucylabs.com/download/receptio/receptio-updates.xml")
     End Sub
 
     Private Sub frmSettings_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
