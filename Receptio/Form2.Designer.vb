@@ -41,6 +41,7 @@ Partial Class frmSettings
         Me.chkFaceDetection = New System.Windows.Forms.CheckBox()
         Me.chkMotionDetection = New System.Windows.Forms.CheckBox()
         Me.pnlWelcomeScreen = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtWelcomeText = New System.Windows.Forms.TextBox()
         Me.txtSignOutButtonText = New System.Windows.Forms.TextBox()
         Me.picCompanyLogo = New System.Windows.Forms.PictureBox()
@@ -194,7 +195,7 @@ Partial Class frmSettings
         Me.tmrMotionLevel = New System.Windows.Forms.Timer(Me.components)
         Me.btnApply = New System.Windows.Forms.Button()
         Me.tmrFPS = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.ExportVisitorLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.tabWelcomeScreen.SuspendLayout()
         Me.pnlVisitorDetection.SuspendLayout()
@@ -202,6 +203,7 @@ Partial Class frmSettings
         CType(Me.numMotionSensitivity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numMotionLockout, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlWelcomeScreen.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picCompanyLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabSignInScreen.SuspendLayout()
         Me.pnlMailChimp.SuspendLayout()
@@ -230,7 +232,6 @@ Partial Class frmSettings
         Me.pnlEmailSettings.SuspendLayout()
         Me.pnlCameraSettings.SuspendLayout()
         Me.pnlSystemSettings.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -447,6 +448,16 @@ Partial Class frmSettings
         Me.pnlWelcomeScreen.Name = "pnlWelcomeScreen"
         Me.pnlWelcomeScreen.Size = New System.Drawing.Size(652, 353)
         Me.pnlWelcomeScreen.TabIndex = 50
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Receptio.My.Resources.Resources.blank_person
+        Me.PictureBox3.Location = New System.Drawing.Point(373, 36)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(241, 141)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 51
+        Me.PictureBox3.TabStop = False
         '
         'txtWelcomeText
         '
@@ -1445,7 +1456,7 @@ Partial Class frmSettings
         '
         'OptionsToolStripMenuItem1
         '
-        Me.OptionsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisitorLogLocationToolStripMenuItem})
+        Me.OptionsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisitorLogLocationToolStripMenuItem, Me.ExportVisitorLogToolStripMenuItem})
         Me.OptionsToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OptionsToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.OptionsToolStripMenuItem1.Name = "OptionsToolStripMenuItem1"
@@ -2038,15 +2049,11 @@ Partial Class frmSettings
         '
         Me.tmrFPS.Interval = 1000
         '
-        'PictureBox3
+        'ExportVisitorLogToolStripMenuItem
         '
-        Me.PictureBox3.Image = Global.Receptio.My.Resources.Resources.blank_person
-        Me.PictureBox3.Location = New System.Drawing.Point(373, 36)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(241, 141)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 51
-        Me.PictureBox3.TabStop = False
+        Me.ExportVisitorLogToolStripMenuItem.Name = "ExportVisitorLogToolStripMenuItem"
+        Me.ExportVisitorLogToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.ExportVisitorLogToolStripMenuItem.Text = "Export Visitor Log"
         '
         'frmSettings
         '
@@ -2076,6 +2083,7 @@ Partial Class frmSettings
         CType(Me.numMotionLockout, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlWelcomeScreen.ResumeLayout(False)
         Me.pnlWelcomeScreen.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picCompanyLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabSignInScreen.ResumeLayout(False)
         Me.pnlMailChimp.ResumeLayout(False)
@@ -2122,7 +2130,6 @@ Partial Class frmSettings
         Me.pnlCameraSettings.PerformLayout()
         Me.pnlSystemSettings.ResumeLayout(False)
         Me.pnlSystemSettings.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2307,4 +2314,5 @@ Partial Class frmSettings
     Friend WithEvents lblFaceDetectionSensitivity As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents ExportVisitorLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

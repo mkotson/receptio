@@ -845,4 +845,56 @@ Public Class frmSettings
             My.Settings.VisitorLogLocation = dialog.SelectedPath + "\"
         End If
     End Sub
+
+    Private Sub ExportVisitorLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportVisitorLogToolStripMenuItem.Click
+        Dim dialog As New SaveFileDialog
+        dialog.InitialDirectory = Environment.SpecialFolder.Desktop
+        dialog.Title = "Export to CSV"
+        dialog.DefaultExt = "CSV"
+        dialog.OverwritePrompt = True
+        dialog.Filter = "CSV files (*.CSV)|*.CSV|All files (*.*)|*.*"
+        If dialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            Dim outFile As IO.StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(dialog.FileName, False)
+            outFile.WriteLine("id, Date, Name, Company, E-mail, Visiting, , In, Out")
+            Dim SQLconnect As New SQLite.SQLiteConnection()
+            Dim SQLcommand As SQLite.SQLiteCommand
+            Dim dbLogFile As String
+            dbLogFile = My.Settings.VisitorLogLocation & "Visitor Log.db3"
+            If Not System.IO.File.Exists(dbLogFile) Then
+                frmWelcome.CreateVisitorLogDB(dbLogFile)
+            End If
+            Try
+                SQLconnect.ConnectionString = "Data Source=" & dbLogFile & ";"
+                SQLconnect.Open()
+                SQLcommand = SQLconnect.CreateCommand
+                SQLcommand.CommandText = "SELECT id,date,name,company,email,visiting,SignIn,SignOut FROM logfile"
+                Dim SQLreader As SQLite.SQLiteDataReader = SQLcommand.ExecuteReader()
+                'If Not SQLreader.IsDBNull(SQLreader.GetOrdinal("Photo")) Then
+                '    While SQLreader.Read()
+                '        picSignInPicture.Image = BlobToImage(SQLreader("Photo"))
+                '    End While
+                'Else
+                '    picSignInPicture.Image = Nothing
+                'End If
+                ' Work around SQLite bug where getordinal before read causes no row current row error
+                While SQLreader.Read()
+                    'If Not SQLreader.IsDBNull(SQLreader.GetOrdinal("Photo")) Then
+                    'picSignInPicture.Image = BlobToImage(SQLreader("Photo"))
+                    'Else
+                    'picSignInPicture.Image = My.Resources.blank_person
+                    'End If
+                    outFile.WriteLine(SQLreader("id") & "," & SQLreader("date") & "," & SQLreader("name") & "," & SQLreader("company") & _
+                                      "," & SQLreader("email") & "," & SQLreader("visiting") & "," & SQLreader("SignIn") & "," & SQLreader("SignOut"))
+                End While
+                SQLcommand.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                SQLconnect.Close()
+                outFile.Close()
+                MsgBox("Export Complete")
+            End Try
+
+        End If
+    End Sub
 End Class
