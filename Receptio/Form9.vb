@@ -136,6 +136,8 @@ Public Class frmWelcome
         'If (LicenseStatus.State = Habanero.Licensing.Validation.LicenseState.Invalid) Then
         '    Me.Text = Me.Text + " | Demo Mode"
         'End If
+        AutoUpdaterDotNET.AutoUpdater.OpenDownloadPage = True
+        AutoUpdaterDotNET.AutoUpdater.Start("http://lucylabs.com/download/receptio/receptio-updates.xml")
     End Sub
 
     Public Sub InitializeSettings()
